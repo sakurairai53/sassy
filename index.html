@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+ <meta charset="UTF-8" />
+ <meta name=”keywords” content="life-is-tech,WebDesign,Leaders,">
+ <meta name="description" content="leaders-day8">
+ <meta name="viewport" content="width=device-width,initial-scale=1.0">
+ <link href='https://fonts.googleapis.com/css?family=Play:700' rel='stylesheet' type='text/css'>
+ <link rel="stylesheet" href="./css/style.css">
+ <script type="text/javascript" src="./js/jquery.min.js"></script>
+
+ 
+  
+    <title>トライアル</title>
+</head>
+
+<body id="body">
+ <header>
+  <div class="container">
+   <nav>
+    <a class="logo" href="#">LOGO</a>
+    <ul>
+     <li><a href="#news">NEWS</a></li>
+     <li><a href="#photo">PHOTO</a></li>
+     <li><a href="#sns">SNS</a></li>
+    </ul>
+   </nav>
+  </div>
+ </header>
+ 
+ 
+ 
+ <div class="main-visual">
+  <img alt="" src="./images/main-visual.png" />
+  <p class="title">Welcome to WebDesgin !!</p>
+  <p class="explanation">This is Practice.</p>
+ </div>
+ 
+ <div class="container main">
+  
+  <div class="section news" id="news">
+   <h1>NEWS</h1>
+   <!-- カラムレイアウトの基本！ -->
+   
+   
+   
+   <div class="row">
+   <div class="topic img">
+   
+     <div class="col-2">
+     <img alt="" src="./images/topic.png" />
+     <p class="text">Topic 1</p>
+    </div>
+    
+    <div class="col-2">
+     <img alt="" src="./images/topic.png" />
+     <p class="text">Topic 2</p>
+      </div>
+     <div class="col-2">
+     <img alt="" src="./images/topic.png" />
+     <p class="text">Topic 3</p>
+    </div>
+  
+  </div>
+  
+  
+  
+  <div class="section photo" id="photo">
+   
+   
+   <h1>PHOTO</h1>
+    <div class="col-4">
+     <img alt="" src="./images/photo.png" />
+    </div>
+    <div class="col-2">
+     <img alt="" src="./images/photo.png" />
+    </div>
+    <div class="col-1">
+     <img alt="" src="./images/photo.png" />
+    </div>
+     <div class="col-1">
+     <img alt="" src="./images/photo.png" />
+    </div>
+     <div class="col-1">
+     <img alt="" src="./images/photo.png" />
+    </div>
+     <div class="col-1">
+     <img alt="" src="./images/photo.png" />
+    </div>
+    <!-- ??? ここにHTMLを書いてね -->
+   </div>
+
+ 
+  
+   
+   
+   
+     <div class="section sns" id="sns">
+   <h1>SNS</h1>
+   <!-- flexboxを使ってレイアウトを整えよう -->
+   <div class="flexbox">
+    <div class="icon">
+     <a href="#"><img alt="" src="./images/email.png" /></a>
+    </div>
+    <div class="icon">
+     <a href="#"><img alt="" src="./images/facebook.png" /></a>
+    </div>
+    <div class="icon">
+     <a href="#"><img alt="" src="./images/twitter.png" /></a>
+    </div>
+    <div class="icon">
+     <a href="#"><img alt="" src="./images/instagram.png" /></a>
+    </div>
+    <div class="icon">
+     <a href="#"><img alt="" src="./images/pinterest.png" /></a>
+    </div>
+    <div class="icon">
+     <a href="#"><img alt="" src="./images/rss.png" /></a>
+    </div>
+   </div>
+  </div>
+ </div>
+ 
+ 
+ 
+ 
+ <footer>
+  <div class="container">
+   <p>Copyright &copy; 2016, TwoBlo</p>
+  </div>
+ </footer>
+
+ <a id="go-top" href="#body"><img alt="" src="./images/upload.png" /></a>
+
+ <script type="text/javascript">
+  // よく使うjQueryを2つほど載せてみました。使いこなせるようになるといいですね。
+  $("a[href^=#]").on("click", function() {
+   var speed = 1000;
+   var href = $(this).attr("href");
+   var target = $(href == "#" || href == "" ? 'html' : href);
+   var position = target.offset().top - 100;
+   $('body,html').animate({
+    scrollTop: position
+   }, speed, 'swing');
+   return false;
+  });
+
+  $(window).on("scroll", function() {
+   if ($(window).scrollTop() > 0) {
+    $("#go-top").fadeIn(200);
+   } else {
+    $("#go-top").fadeOut(200);
+   }
+  });
+
+ </script>
+</body>
+
+</html>

@@ -1,0 +1,249 @@
+/*
+  一応抜け落ちている部分には
+  ???という形でヒントを書いておきました。
+  もちろん無視してもOKですし、
+  もっと多く書き加えても大丈夫です。
+*/
+
+
+/*
+  共通
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background: #DDD;
+  padding-top: 50px;
+   
+}
+
+.container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+
+/*
+  ヘッダー部分
+*/
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: #DDD;
+  width: 100%;
+  border-bottom: 5px solid #0095a3;
+}
+
+nav {
+  overflow: hidden;
+    display: block;
+}
+
+nav .logo {
+  font-size: 18px;
+    
+}
+
+nav ul {
+
+    float: right;
+    list-style-type: none;
+    
+}
+
+nav li {
+  float: left;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 12px 20px;
+  font-size: 18px;
+  color: #000;
+  line-height: 21px;
+  float: left;
+}
+
+nav li a:hover {
+  background: #0095a3;
+  color: #DDD;
+}
+
+
+/*
+  メインビジュアル
+*/
+
+.main-visual {
+ position: relative;
+    height: 500px;
+}
+
+.main-visual img {
+  width: 100%;
+  max-height: 500px;
+}
+
+.main-visual .title {
+  position: absolute;
+    top:150px;
+  text-align: center;
+  width: 100%;
+  color: #DDD;
+  font-size: 60px;
+  font-family: 'Play', sans-serif;
+}
+
+.main-visual .explanation {
+  position: absolute;
+    bottom: 100px;
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  color: #DDD;
+}
+
+
+/*
+  カラムレイアウト
+*/
+
+.row {
+  overflow: hidden;
+   width: 900px;
+   
+}
+
+.col-4 {
+    width: 590px;
+    margin-top: 5px;
+    margin-right: 5px;
+    float: left;
+    overflow: hidden;
+   
+}
+
+.col-2 {
+    width: 290px;
+  margin:5px;
+    float: left;
+    
+   
+}
+
+.col-1 {
+    width: 140px;
+    margin-left: 5px;
+ margin-right: 5px;
+  float: left;
+}
+
+
+/*
+  セクションの設定
+*/
+
+.section {
+  margin-top: 120px;
+}
+
+.photo{margin-top: 450px;}
+
+
+.sns{margin-top:750px; }
+
+.section h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.section h1:before,
+.section h1:after {
+  content: '-';
+  margin: 0 20px;
+}
+
+.topic img {
+  width: 100%;
+  height: auto;
+ border-radius: 50%;
+    
+}
+
+.news .text {
+  font-size: 18px;
+  text-align: center;
+}
+
+.photo .col-1,
+.photo .col-2,
+.photo .col-4 {
+  margin-bottom: 4px;
+}
+
+.photo img {
+  width: 100%;
+}
+
+.sns .flexbox {
+ overflow: hidden; 
+
+}
+
+.sns .flexbox .icon {
+ width: 140px;
+  margin: 5px;
+  float: left;
+}
+
+.sns img {
+  width: 60%;
+  margin: 0 20%;
+}
+
+
+/*
+  フッター部分
+*/
+
+footer {
+  margin-top: 70px;
+  background: #0095a3;
+  padding: 20px 0;
+}
+
+footer p {
+  color: #DDD;
+  text-align: center;
+}
+
+#go-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 20;
+}
+
+
+/*
+  上に戻るボタン
+*/
+
+#go-top img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  padding: 20px;
+  background: #fff;
+}
